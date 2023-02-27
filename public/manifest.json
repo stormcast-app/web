@@ -1,0 +1,45 @@
+{
+  "theme_color": "#00A4F5",
+  "background_color": "#D8EEFE",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Stormcast | Storm Forecasting",
+  "short_name": "Stormcast",
+  "description": "Flood Prevention Application",
+  "orientation": "portrait",
+  "display_mode": "fullscreen",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color_in_manifest": true,
+  "background_color_in_manifest": true,
+  "display_in_manifest": true,
+  "scope_in_manifest": true,
+  "start_url_in_manifest": true,
+  "name_in_manifest": true,
+  "short_name_in_manifest": true,
+  "description_in_manifest": true,
+  "orientation_in_manifest": true,
+  "display_mode_in_manifest": true,
+  "icons_in_manifest": true
+}
