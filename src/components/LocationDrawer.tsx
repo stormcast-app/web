@@ -6,6 +6,8 @@ import {
   Flex,
   Badge,
   Group,
+  Button,
+  Box,
 } from '@mantine/core';
 
 type LocationDrawerProps = {
@@ -38,8 +40,11 @@ export default function LocationDrawer({
         size="xl"
         padding="lg"
         position="bottom"
+        withCloseButton={false}
         styles={{
-          root: {},
+          body: {
+            height: '100%',
+          },
           drawer: {
             maxWidth: 444,
             width: '100%',
@@ -107,6 +112,14 @@ export default function LocationDrawer({
             </List.Item>
           ))}
         </List>
+
+        <Box
+          sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, padding: 20 }}
+        >
+          <Button onClick={toggle} variant="light" fullWidth>
+            Cancel
+          </Button>
+        </Box>
       </MantineDrawer>
     </>
   );

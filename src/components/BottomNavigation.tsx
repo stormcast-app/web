@@ -1,5 +1,5 @@
 import navigationData from '@/configs/navigation';
-import { Flex, Group, Text } from '@mantine/core';
+import { Button, Flex, Group, Text } from '@mantine/core';
 import { useRouter } from 'next/router';
 
 const BottomNavigation = () => {
@@ -29,6 +29,7 @@ const BottomNavigation = () => {
           justify="center"
           direction="column"
           gap={6}
+          onClick={() => router.push(item.path)}
           sx={(theme) => ({
             transition: 'all 0.2s ease',
             cursor: 'pointer',

@@ -21,6 +21,7 @@ import { useState } from 'react';
 import { useToggle } from '@mantine/hooks';
 import locationData from '@/configs/location';
 import LocationDrawer from '@/components/LocationDrawer';
+import AppBar from '@/components/AppBar';
 
 export default function Home() {
   const theme = useMantineTheme();
@@ -35,27 +36,8 @@ export default function Home() {
         location={location}
         setLocation={setLocation}
       />
-      <Box p={16}>
-        <Flex justify="space-between" align="center">
-          <Flex align="center" gap={12} sx={{ width: '100%' }}>
-            <Text size={14} weight={700}>
-              Location
-            </Text>
-            <Group spacing={6}>
-              <IconMapPinFilled
-                size={16}
-                style={{ color: theme.colors.brand[5] }}
-              />
-              <Text>{location.label}</Text>
-            </Group>
-          </Flex>
-          <Button variant="subtle" size="xs" onClick={() => toggleDrawer()}>
-            Change
-          </Button>
-        </Flex>
-      </Box>
 
-      <Divider size={16} color="#f5f5f5" />
+      <AppBar variant="location" location={location} toggle={toggleDrawer} />
 
       <Box p={16}>
         <Card
@@ -64,7 +46,6 @@ export default function Home() {
           sx={{
             color: '#fff',
             transition: 'all 0.2s ease',
-            borderWidth: 2,
             borderColor: theme.colors.red[7],
             cursor: 'pointer',
             background: theme.colors.red[7],
@@ -103,7 +84,7 @@ export default function Home() {
           </Group>
 
           <Flex align="center" justify="space-between" gap={16}>
-            <ActionIcon color="red">
+            <ActionIcon color="red" variant="filled">
               <IconRefresh color="#fff" />
             </ActionIcon>
 
@@ -122,7 +103,6 @@ export default function Home() {
           radius="md"
           sx={{
             transition: 'all 0.2s ease',
-            borderWidth: 2,
             borderColor: '#F3F4F6',
             cursor: 'pointer',
             ':hover': {
@@ -152,7 +132,7 @@ export default function Home() {
         </Card>
       </Box>
 
-      <Divider size={16} color="#f5f5f5" />
+      <Divider size={12} color="#f5f5f5" />
 
       <Box p={16}>
         <Text weight={700}>Latest Information</Text>

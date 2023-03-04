@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { getCookie, setCookie } from 'cookies-next';
 import { GetServerSidePropsContext } from 'next';
 import { Inter } from 'next/font/google';
+import NextProgress from 'next-progress';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -51,6 +52,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
             theme={{ colorScheme, fontFamily: 'Inter', ...theme }}
           >
             <Layout>
+              <NextProgress />
               <Component {...pageProps} />
             </Layout>
           </MantineProvider>
